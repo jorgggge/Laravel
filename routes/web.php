@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// LLamo el controlador dentro de la carpeta App\Http\Controllers
+Route::get('/', "UserController@index");
+
+
+Route::get('/Usuarios', function (){
+	return "Hola Usuarios";
 });
+
+
+Route::get('/{id}', "UserController@Numero")->where('id','\d+');
+
+
