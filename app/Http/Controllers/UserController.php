@@ -16,8 +16,23 @@ class UserController extends Controller
     	return "Soy el numero $N";
     }
 
+    // Llamar un paguina web
     public function PaguinaPrincipal(){
-    	return "Olas";
+
+    	$Personas = [
+    		'Jorge',
+    		'Arturo',
+    		'Ana'
+    	];
+
+    	return view('prueba',[
+    		'Personas' => $Personas,
+    		'Texto' => 'Hola Gente de Youtube'
+    	]);
+    }
+
+    public function Prueba(){
+
     }
 }
 

@@ -14,10 +14,8 @@
 // LLamo el controlador dentro de la carpeta App\Http\Controllers
 Route::get('/', "UserController@index");
 
-Route::get('/Usuarios', function (){
-	return "Hola Usuarios";
-});
+// Llama una paguina web
+Route::get('/Usuarios',"UserController@PaguinaPrincipal" );
 
-Route::get('/{id}', "UserController@Numero")->where('id','\d+');
-
+Route::get('/{id}', "UserController@Prueba")->where('id','\d+');
 
